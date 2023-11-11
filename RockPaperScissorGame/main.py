@@ -29,11 +29,11 @@ scissors = '''
 import random
 
 while (True):
-    print(f"enter your choice among for rock option 0,  paper option 2 and scissors option 3 ")
+    print(f"enter your choice among for rock option 0,  paper option 1 and scissors option 2")
     user_choice = int(input())
 
     computer_choice = random.randint(0, 2)
-
+    print(f"computer choose {computer_choice}")
     if (user_choice == computer_choice):
         print("draw. please retry")
     elif (user_choice == 0 and computer_choice == 1):
@@ -50,6 +50,11 @@ while (True):
         print("you win. computer loses")
     else:
         print("invalid choice. please retry")
-    retry = input("Enter your choice to retry or Exit")
-    if (retry == "exit"):
+    retry = input("Enter your choice to retry or exit").lower()
+    if (retry == "retry"):
+        continue
+    elif (retry == "exit"):
         break
+    else:
+        break
+
